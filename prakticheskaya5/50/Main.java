@@ -49,14 +49,14 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter an equation (e.g., 2 + 3):");
+        System.out.println("Введите уравнение (e.g., 2 + 3):");
         String equation = scanner.nextLine();
 
         try {
             double result = calculate(equation);
             System.out.println("Result: " + result);
         } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a valid equation.");
+            System.out.println("Неверный ввод. Пожалуйста, введите корректное уравнение.");
         } catch (ArithmeticException | IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
